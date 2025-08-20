@@ -9,7 +9,7 @@ class Author:
 
     @name.setter
     def name(self, value):
-        # Author name is immutable
+       
         return
 
     def articles(self):
@@ -44,7 +44,7 @@ class Magazine:
         if isinstance(value, str) and 2 <= len(value) <= 16:
             self._name = value
         else:
-            return  # silently ignore invalid name
+            return  
 
     @property
     def category(self):
@@ -55,7 +55,7 @@ class Magazine:
         if isinstance(value, str) and len(value) > 0:
             self._category = value
         else:
-            return  # silently ignore invalid category
+            return 
 
     def articles(self):
         return [article for article in Article.all if article.magazine == self]
@@ -101,7 +101,6 @@ class Article:
 
     @title.setter
     def title(self, value):
-        # Title is immutable
         return
 
     @property
